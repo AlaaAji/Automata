@@ -5,21 +5,21 @@ public class state {
     private boolean start;
     private boolean end;
     private Type type;
-    private int SL;
+    //private int SL;
     private ArrayList<node> move = new ArrayList<>();
     state(){
         name= "";
         start=false;
         end=false;
         type=Type.NoThing;
-        SL=0;
+     //   SL=0;
     }
-    state (String name , boolean start , boolean end , Type type , int SL ,ArrayList<node> move){
+    state (String name , boolean start , boolean end , Type type  ,ArrayList<node> move){
         this.name=name;
         this.start=start;
         this.end=end;
         this.type=type;
-        this.SL=SL;
+     //   this.SL=SL;
         this.move=move;
     }
 
@@ -35,9 +35,9 @@ public class state {
     public void setType(Type type){
         this.type=type;
     }
-    public void setSL(int SL) {
+    /*public void setSL(int SL) {
         this.SL = SL;
-    }
+    }*/
 
     public void setMove(ArrayList<node> move) {
         this.move = move;
@@ -55,9 +55,9 @@ public class state {
         return type;
     }
 
-    public int getSL() {
+    /*public int getSL() {
         return SL;
-    }
+    }*/
     public ArrayList<node> getMove() {
         return move;
     }
