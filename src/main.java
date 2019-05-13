@@ -20,7 +20,7 @@ public class main {
             switch (X) {
                 case 1:
                     try {
-                        File file = new File("Example Java test.json");
+                        File file = new File("src/Example Java test.json");
                         System.out.println(file.getAbsolutePath());
                         Object obj = new JSONParser().parse(new FileReader(file));
 
