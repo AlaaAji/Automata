@@ -5,21 +5,18 @@ public class state {
     private boolean start;
     private boolean end;
     private Type type;
-    //private int SL;
     private ArrayList<node> move = new ArrayList<>();
     state(){
         name= "";
         start=false;
         end=false;
         type=Type.NoThing;
-     //   SL=0;
     }
     state (String name , boolean start , boolean end , Type type  ,ArrayList<node> move){
         this.name=name;
         this.start=start;
         this.end=end;
         this.type=type;
-     //   this.SL=SL;
         this.move=move;
     }
 
@@ -35,13 +32,8 @@ public class state {
     public void setType(Type type){
         this.type=type;
     }
-    /*public void setSL(int SL) {
-        this.SL = SL;
-    }*/
+    public void setMove(ArrayList<node> move) { this.move = move; }
 
-    public void setMove(ArrayList<node> move) {
-        this.move = move;
-    }
     public String getName() {
         return name;
     }
@@ -54,19 +46,17 @@ public class state {
     public Type getType(){
         return type;
     }
-
-    /*public int getSL() {
-        return SL;
-    }*/
     public ArrayList<node> getMove() {
         return move;
     }
+
     public void FunMov() {
         for(int i=0;i<move.size();i++)
         {
             System.out.print("In Language symbol :" + move.get(i).getC() + "It Move To State" + move.get(i).getS()+"\n");
         }
     }
+
     public void PrintState(){
         System.out.print("State Name :" + name +"\n" + "Start:" + start + "\n" + "End :" + end +"\n" );
         if (end==true)

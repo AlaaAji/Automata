@@ -1,29 +1,30 @@
-{"S": ["0","1"],
+{"Q":["q0","q1","q2","q3"],
+"S": ["0","1"],
 "DFA":
 [
 {"name":"q0",
 "start":true,
 "end":false,
 "type":"NoThing",
-"move":[{"c":"o","s":"q0"},{"c":"1","s":"q1"}]
+"move":[{"c":"o","s":"q1"},{"c":"1","s":"q0"}]
 },
 {"name":"q1",
 "start":false,
 "end":false,
 "type":"NoThing",
-"move":[{"c":"0","s":"q2"},{"c":"1","s":"q3"}]
+"move":[{"c":"0","s":"q1"},{"c":"1","s":"q2"}]
 },
 {"name":"q2",
 "start":false,
 "end":false,
 "type":"NoThing",
-"move":[{"c":"0","s":"q0"},{"c":"1","s":"q1"}]
+"move":[{"c":"0","s":"q1"},{"c":"1","s":"q3"}]
 },
 {"name":"q3",
 "start":false,
 "end":true,
 "type":"Acceptable",
-"move":[{"c":"0","s":"q2"},{"c":"1","s":"q3"}]
+"move":[{"c":"0","s":"q3"},{"c":"1","s":"q3"}]
 }
 ]
 }

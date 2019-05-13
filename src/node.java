@@ -5,5 +5,4 @@ public class node {
     public String getS(){return s;}
     public void setC(char c){this.c= c;}
     public void setS(String s){this.s= s;}
-
 }

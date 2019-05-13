@@ -8,7 +8,7 @@
 },
 {"name":"q1",
 "start":false,
-"end":false,1
+"end":false,
 "type":"NoThing",
 "move":[{"c":"y","s":"q2"},{"c":"o","s":"q5"},{"c":"r","s":"q11"}]
 },
