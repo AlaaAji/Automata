@@ -18,7 +18,7 @@ public class main {
             X = input.nextInt();
             switch (X) {
                 case 1:
-                    ReadFile("src/Divid on 4.json", MyDFA);
+                    ReadFile("src/Divide on 4.json", MyDFA);
                     Test(MyDFA);
                 case 2:
                     ReadFile("src/contain 011.json", MyDFA);
