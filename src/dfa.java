@@ -43,45 +43,9 @@ public class dfa {
             DFA.get(i).FunMov();
         }
     }
-
-    public boolean IsLineComment(String example) {
-        char ch, ch1;
-        int r = 0;
-        boolean b = true;
-        ch = example.charAt(0);
-        ch1 = example.charAt(1);
-        if (ch == '/' && ch1 == '/') {
-            while (r < example.length()) {
-                if (example.charAt(r) != '\n') {
-                    b = false;
-                    break;
-                }
-                r++;
-            }
-        }
-        return b;
-    }
-
-    public boolean IsLongComment(String example) {
-        char ch, ch1;
-        int l = 0, r = 0;
-        boolean b = false;
-        if (example.charAt(0) == '/' && example.charAt(1) == '*' && example.charAt(example.length()) == '/' && example.charAt(example.length()) == '*')
-            b = true;
-        return b;
-    }
-
     public Type IsAcceptable(String example) {
         int x = 0, A = 0;
         state S = DFA.get(0);
-       /* if (IsLineComment(example)) {
-            S.setType(Type.LineComment);
-            return S.getType();
-        }
-        if (IsLongComment(example)) {
-            S.setType(Type.LongComment);
-            return S.getType();
-        }*/
         ArrayList<node> M = new ArrayList<>();
         while (x != example.length()) {
             char c = example.charAt(x);
